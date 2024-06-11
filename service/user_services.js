@@ -13,7 +13,9 @@ class UserService {
   }
 
   async specificUser(ID) {
-    const result = await this.db.query(`SELECT * FROM users WHERE id = ${ID}`);
+    const result = await this.db.query(
+      `SELECT users.id, name, title, content FROM users INNER JOIN blogs ON users.id = ${ID}`
+    );
     return result;
   }
 
