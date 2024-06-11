@@ -8,7 +8,9 @@ class UserService {
   }
 
   async userDisplay() {
-    const result = await this.db.query(`SELECT * FROM users ORDER BY id ASC`);
+    const result = await this.db.query(
+      `SELECT users.id, name, title, content FROM users LEFT JOIN blogs ON users.id = blogs.users_id`
+    );
     return result;
   }
 
