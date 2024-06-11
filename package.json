@@ -1,0 +1,11 @@
+{
+    "scripts": {
+    "person": "node app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node": "^20.14.0",
+    "pg": "^8.12.0"
+  }
+}
