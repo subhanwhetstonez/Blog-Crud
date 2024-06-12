@@ -26,12 +26,9 @@ class BlogService {
   }
 
   async inputBlog(users_id, title, content) {
-    console.log("wii");
     const result = await this.db.query(
-      `INSERT INTO blogs (users_id, title, content) 
-      VALUES ('${users_id}', '${title}', '${content}') RETURNING *`
+      `INSERT INTO blogs (users_id, title, content) VALUES ('${users_id}','${title}','${content}') RETURNING *`
     );
-    console.log("woo");
     return result;
   }
 

@@ -23,9 +23,9 @@ class BlogController {
 
   async putinBlog(req, res) {
     const { users_id, title, content } = req.body;
-    console.log("waa");
     await this.blogService.inputBlog(users_id, title, content);
     res.json("BLOG HAS BEEN ADDED");
+    console.log("waa");
   }
 
   async updateBlog(req, res) {
