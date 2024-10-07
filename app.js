@@ -8,6 +8,8 @@ const BlogService = require("./controller/blog-controller.js");
 app.use(express.json());
 app.use("/user", UserRoutes);
 app.use("/blog", BlogRoutes);
+//@subhanwhetstonez
 
 app.use("/", UserService.userDisplay.bind(UserService));
 app.listen(2222, () => [console.log(" The server started on PORT = 2222")]);
+console.log("sdijwijdwidjijdjdj");
